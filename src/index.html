@@ -4,24 +4,96 @@
     <title>Kantor Słupca</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(window).on('load', function(){
+        $(".loader").delay(1200).fadeOut(2000);
+      })
+    </script>
   </head>
 
   <body>
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Kantor Słupca</h1>
-        <h2>bla</h2>
-      </div>
-    </section>
+    <section class="loader"></section>
     <main>
-
+      <div class="container-fluid">
+        <div class="title text-center mt-4 mb-4">
+          <h1>KANTOR</h1>
+          <h2>SŁUPCA</h2>
+        </div>
+        <div class="currency text-center mt-4 mb-42">
+          <ul class="list-inline d-flex justify-content-center align-items-center flex-wrap">
+            <li class="eur" data-toggle="tooltip" data-placement="top" title="EURO"></li>
+            <li class="usd" data-toggle="tooltip" data-placement="top" title="Dolar amerykański"></li>
+            <li class="gbp" data-toggle="tooltip" data-placement="top" title="Funt brytyjski"></li>
+            <li class="cad" data-toggle="tooltip" data-placement="top" title="Dolar kanadyjski"></li>
+            <li class="aud" data-toggle="tooltip" data-placement="top" title="Dolar australijski"></li>
+            <li class="huf" data-toggle="tooltip" data-placement="top" title="Forint węgierski"></li>
+            <li class="nok" data-toggle="tooltip" data-placement="top" title="Korona norweska"></li>
+            <li class="sek" data-toggle="tooltip" data-placement="top" title="Korona szwedzka"></li>
+            <li class="dkk" data-toggle="tooltip" data-placement="top" title="Korona duńska"></li>
+            <li class="czk" data-toggle="tooltip" data-placement="top" title="Korona czeska"></li>
+            <li class="hrk" data-toggle="tooltip" data-placement="top" title="Kuny chorwackie"></li>
+          </ul>
+        </div>
+        <div class="about text-center">
+          <p>Działamy od 1992r</p>
+        </div>
+        <div class="info text-center mt-4 mb-4">
+          <h4>Kontakt pod numerem:</h4>
+          <button class="btn btn-info btn-lg mt-4 mb-4" type="button">
+            <a class="text-white" href="tel:+48605556326">+48 605 556 326</a>
+          </button>
+        </div>
+        <div class="places">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card m-3 text-center">
+                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.242918,18.094791,15z/data=!4m5!3m4!1s0x0:0xbb651c3a2653d198!8m2!3d52.242918!4d18.094791">Kantor Golina</a></div>
+                <div class="card-body">
+                  <h5 class="card-title">ul.Mickiewicza 2</h5>
+                  <p class="card-text">Godziny otwarcia:
+                    <br>PON-PT 8:00 - 17:00
+                    <br>SOB 8:00 - 13:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card m-3 text-center">
+                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut+Celmer/@52.2895062,17.8684693,17z/data=!3m1!4b1!4m5!3m4!1s0x4704c60812a6af5d:0x5ed562924c24e5a2!8m2!3d52.2895029!4d17.870658">Kantor Słupca</a></div>
+                <div class="card-body">
+                  <h5 class="card-title">ul.Pułaskiego 2</h5>
+                  <p class="card-text">Godziny otwarcia:
+                    <br>PON-PT 8:00 - 17:00
+                    <br>SOB 8:00 - 13:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card m-3 text-center">
+                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.44019,17.7714913,17z/data=!3m1!4b1!4m5!3m4!1s0x4704be52225b64a3:0x6b792cc878e44d3f!8m2!3d52.44019!4d17.77368">Kantor Witkowo</a></div>
+                <div class="card-body">
+                  <h5 class="card-title">ul.Stary Rynek 4</h5>
+                  <p class="card-text">Godziny otwarcia:
+                    <br>PON-PT 8:30 - 16:30
+                    <br>SOB 8:30 - 13:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- SCRIPTS -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 
