@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   max-width: 100vw;
 }
+
 .loader{
   background-image: url('../img/hero-euro.jpg');
   background-color: white;
@@ -18,10 +19,25 @@ body {
 }
 .title {
   h1{
-    font-size: 10vw;
+    font-size:calc(16px + 11vw);
+
+    font-weight: 700;
+    color: transparent;
+    background: url('../img/coins.jpeg')repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position:relative;
+    text-align:center;
   }
   h2{
-    font-size: 8vw;
+    font-size:calc(16px + 9vw);
+    font-weight: 700;
+    color: transparent;
+    background: url('../img/coins.jpeg')repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position:relative;
+    text-align:center;
   }
 }
 .about{
@@ -40,9 +56,23 @@ body {
   }
 }
 
+
+@mixin center(){
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+}
+.container{
+  position:absolute;
+  @include center();
+}
+
 .bg-custom {
   background-color: rgba(0, 0, 0, 0.03);
 }
+
 /**
  * ----------------------------------------
  * animations
@@ -53,16 +83,16 @@ body {
 	        animation: tracking-in-expand 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.8s both;
 }
 .currency li {
-	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-	        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.8s both;
+	        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.8s both;
 }
 .text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.5s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3.5s both;
 }
 .scale-in-center {
-	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s both;
-	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 5s both;
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.2s both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.2s both;
 }
 
 

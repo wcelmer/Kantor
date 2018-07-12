@@ -1,7 +1,26 @@
 $( document ).ready(function() {
+
+  // TOOLTIPS
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
+
+//hero text background change
+
+  var mouseX, mouseY;
+  var ww = $( window ).width();
+  var wh = $( window ).height();
+  var traX, traY;
+  $(document).mousemove(function(e){
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    traX = ((4 * mouseX) / 570) + 40;
+    traY = ((4 * mouseY) / 570) + 50;
+    $(".title > h1").css({"background-position": traX + "%" + traY + "%"});
+    $(".title > h2").css({"background-position": traX + "%" + traY + "%"});
+  });
+
+// Flag icons adding in background
 
 function setBackGround() {
   let el = $('.currency li');
@@ -97,11 +116,30 @@ var date = $('#time');
   loadGBP();
   loadCHF();
 
+ // button reload actual prices
   $('#newPrices').on('click', function () {
     loadEUR();
     loadUSD();
     loadGBP();
     loadCHF();
   });
+
+  // Animate hover efect in places cards
+
+  $('.places .col-sm-4').hover(
+    // trigger when mouse hover
+    function(){
+        $(this).animate({
+            marginTop: "-=1%",
+        },300);
+    },
+
+    // trigger when mouse out
+    function(){
+        $(this).animate({
+            marginTop: "0%"
+        },300);
+    }
+  );
 
 });
