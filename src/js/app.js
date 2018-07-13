@@ -7,17 +7,21 @@ $(function () {
 
 //hero text background change
 
-  var mouseX, mouseY;
-  var ww = $( window ).width();
-  var wh = $( window ).height();
-  var traX, traY;
+  let mouseX, mouseY;
+  let ww = $( window ).width();
+  let wh = $( window ).height();
+  let traX, traY;
+  let timerSet;
   $(document).mousemove(function(e){
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-    traX = ((4 * mouseX) / 570) + 40;
-    traY = ((4 * mouseY) / 570) + 50;
-    $(".title > h1").css({"background-position": traX + "%" + traY + "%"});
-    $(".title > h2").css({"background-position": traX + "%" + traY + "%"});
+    clearTimeout(timerSet);
+    timerSet = setTimeout(function () {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+      traX = ((4 * mouseX) / 570) + 40;
+      traY = ((4 * mouseY) / 570) + 50;
+      $(".title > h1").css({"background-position": traX + "%" + traY + "%"});
+      $(".title > h2").css({"background-position": traX + "%" + traY + "%"});
+    }, 10);
   });
 
 // Flag icons adding in background
@@ -31,6 +35,8 @@ function setBackGround() {
   }
 }
 setBackGround();
+
+// Fade alert information
 
 //currency price
 
@@ -122,24 +128,47 @@ var date = $('#time');
     loadUSD();
     loadGBP();
     loadCHF();
+
+    $('.alert').show();
   });
 
   // Animate hover efect in places cards
 
-  $('.places .col-sm-4').hover(
+  $('.places .col-sm-4, .places .col-sm-5 ').hover(
     // trigger when mouse hover
     function(){
         $(this).animate({
             marginTop: "-=1%",
-        },300);
+        },200);
     },
 
     // trigger when mouse out
     function(){
         $(this).animate({
             marginTop: "0%"
-        },300);
+        },200);
     }
   );
+
+  //FadeIn elements in vieport with scroll timer to improve fireup scrolling function
+
+  let timer;
+
+  $(window).scroll( function(){
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      /* Check the location of each desired element */
+      $('.hideme').each( function(i){
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if( bottom_of_window > bottom_of_object ){
+          $(this).animate({'opacity':'1'},600);
+        }
+      });
+    }, 50);
+  });
 
 });

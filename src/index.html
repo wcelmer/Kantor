@@ -14,13 +14,13 @@
     <script src="./js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(window).on('load', function(){
-        $(".loader").delay(1000).fadeOut(1000);
+        $(".lds-roller").delay(1000).fadeOut(1000);
       })
     </script>
   </head>
 
   <body>
-    <section class="loader"></section>
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     <main>
       <div class="container-fluid px-0">
         <div class="title text-center mb-4 p-4">
@@ -42,8 +42,8 @@
             <li class="hrk" data-toggle="tooltip" data-placement="top" title="Kuny chorwackie"></li>
           </ul>
         </div>
-        <div class="about text-center">
-          <p class="text-focus-in">Działamy od 1992r.</p>
+        <div class="about text-center bg-custom p-3">
+          <p class="text-focus-in pt-2">Nasze kantory działają na terenie województwa wielkopolskiego: w Słupcy, Golinie, Witkowie oraz oddział partnerski w Kostrzynie. Od ponad 20 lat dbamy o bezpieczeństwo i komfort naszych klientów podczas wymiany walut, zapewniając odpowiednie zabezpieczenia transakcji oraz obsługę na wysokim poziomie.</p>
         </div>
         <div class="info text-center mt-4 mb-4">
           <h4 class="text-focus-in">Kontakt pod numerem:</h4>
@@ -53,53 +53,57 @@
         </div>
         <div class="prices mt-4 mb-4">
           <div class="row d-flex flex-wrap justify-content-center align-items-center">
-            <div class="card col-sm-12 m-2 p-0 text-center border-white">
+            <div class="card col-sm-12 m-2 p-0 text-center border-white hideme">
               <div class="card-body bg-custom">
                 <h5 id="time" class="card-title">Data</h5>
                 <p class="card-text">ŚREDNIE KURSY NBP</p>
               </div>
             </div>
-            <div class="card col-sm-4 m-2 text-center shadow">
+            <div class="card col-sm-4 m-2 text-center shadow hideme">
               <div class="card-body">
                 <h5 id="pairEURPLN" class="card-title">0.00</h5>
                 <p class="card-text">EUR / PLN</p>
               </div>
             </div>
-            <div class="card col-sm-4 m-2 text-center shadow">
+            <div class="card col-sm-4 m-2 text-center shadow hideme">
               <div class="card-body">
                 <h5 id="pairUSDPLN" class="card-title">0.00</h5>
                 <p class="card-text">USD / PLN</p>
               </div>
             </div>
-            <div class="card col-sm-4 m-2 text-center shadow">
+            <div class="card col-sm-4 m-2 text-center shadow hideme">
               <div class="card-body">
                 <h5 id="pairGBPLN" class="card-title">0.00</h5>
                 <p class="card-text">GBP / PLN</p>
               </div>
             </div>
-            <div class="card col-sm-4 m-2 text-center shadow">
+            <div class="card col-sm-4 m-2 text-center shadow hideme">
               <div class="card-body">
                 <h5 id="pairCHFPLN" class="card-title">0.00</h5>
                 <p class="card-text">CHF / PLN</p>
               </div>
             </div>
-            <div class="card col-sm-12 m-2 text-center border-white">
+            <div class="card col-sm-12 m-2 text-center border-white hideme">
               <div class="card-body">
                 <div class="d-flex justify-content-center">
                   <button id="newPrices" type="button" class="btn btn-info btn-lg">Aktualizuj</button>
                 </div>
               </div>
             </div>
+            <div class="alert alert-info alert-dismissable mx-4 text-center slide-in-blurred-top">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Powyższa tabela przedstawia średnie kursy walut z Narodowego Banku Polskiego. Nie jest ona kursem wymiany walut w kantorze. Prosimy o kontakt telefoniczny w celu sprawdzenia aktualnego kursu walut.
+            </div>
           </div>
         </div>
         <div class="places p-0 text-center">
           <div class="row d-flex flex-wrap justify-content-center align-items-center">
-            <div class="card col-sm-12 m-2 px-0 border-white">
+            <div class="card col-sm-12 m-2 px-0 border-white hideme">
               <div class="card-body bg-custom">
                 <h4 class="p-0 m-0">PLACÓWKI</h4>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme">
               <div class="card m-3 text-center shadow">
                 <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.242918,18.094791,15z/data=!4m5!3m4!1s0x0:0xbb651c3a2653d198!8m2!3d52.242918!4d18.094791">Kantor Golina</a></div>
                 <div class="card-body">
@@ -111,19 +115,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme">
               <div class="card m-3 text-center shadow">
-                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut+Celmer/@52.2895062,17.8684693,17z/data=!3m1!4b1!4m5!3m4!1s0x4704c60812a6af5d:0x5ed562924c24e5a2!8m2!3d52.2895029!4d17.870658">Kantor Słupca</a></div>
+                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.397907,17.2262927,15z/data=!4m5!3m4!1s0x0:0x2cce5aa5dcecce61!8m2!3d52.397907!4d17.2262927">Kantor Kostrzyn</a></div>
                 <div class="card-body">
-                  <h5 class="card-title"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut+Celmer/@52.2895062,17.8684693,17z/data=!3m1!4b1!4m5!3m4!1s0x4704c60812a6af5d:0x5ed562924c24e5a2!8m2!3d52.2895029!4d17.870658">ul.Pułaskiego 2</a></h5>
+                  <h5 class="card-title"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.397907,17.2262927,15z/data=!4m5!3m4!1s0x0:0x2cce5aa5dcecce61!8m2!3d52.397907!4d17.2262927">ul.Poznańska 5</a></h5>
                   <p class="card-text">Godziny otwarcia:
-                    <br>PON-PT 8:00 - 17:00
-                    <br>SOB 8:00 - 13:00
+                    <br>PON-PT 8:30 - 17:00
+                    <br>SOB 8:30 - 13:00
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 hideme">
               <div class="card m-3 text-center shadow">
                 <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut/@52.44019,17.7714913,17z/data=!3m1!4b1!4m5!3m4!1s0x4704be52225b64a3:0x6b792cc878e44d3f!8m2!3d52.44019!4d17.77368">Kantor Witkowo</a></div>
                 <div class="card-body">
@@ -135,10 +139,21 @@
                 </div>
               </div>
             </div>
+            <div class="col-sm-5 hideme">
+              <div class="card m-3 text-center shadow">
+                <div class="card-header"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut+Celmer/@52.2895062,17.8684693,17z/data=!3m1!4b1!4m5!3m4!1s0x4704c60812a6af5d:0x5ed562924c24e5a2!8m2!3d52.2895029!4d17.870658">Kantor Słupca</a></div>
+                <div class="card-body">
+                  <h5 class="card-title"><a class="text-dark" href="https://www.google.pl/maps/place/Kantor+Wymiany+Walut+Celmer/@52.2895062,17.8684693,17z/data=!3m1!4b1!4m5!3m4!1s0x4704c60812a6af5d:0x5ed562924c24e5a2!8m2!3d52.2895029!4d17.870658">ul.Pułaskiego 2</a></h5>
+                  <p class="card-text">Godziny otwarcia:
+                    <br>PON-PT 8:00 - 17:00
+                    <br>SOB 8:00 - 13:00
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
     <footer>
       <div class="footer-copyright text-center mt-4 py-3 bg-custom">© 2018 Copyright: Kantor Wymiany Walut Słupca</div>
     </footer>
