@@ -32,8 +32,6 @@ function setBackGround() {
 }
 setBackGround();
 
-// Fade alert information
-
 //currency price
 
 var EurUrl = 'http://api.nbp.pl/api/exchangerates/rates/a/eur/?format=json';
@@ -130,7 +128,7 @@ var date = $('#time');
 
   // Animate hover efect in places cards
 
-  $('.places .col-sm-4, .places .col-sm-5 ').hover(
+  $('.places .col-sm-4').hover(
     // trigger when mouse hover
     function(){
         $(this).animate({
